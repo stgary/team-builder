@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import ReactDOM from "react-dom";
 import Team from "./components/Team";
 import Form from "./components/Form";
 import './App.css';
 
 function App() {
 
-  const [member, setMember] = useState([
+  const [members, setMembers] = useState([
     {
       id: 1,
       name: "Steve Gary",
@@ -22,8 +21,8 @@ function App() {
       email: nm.email,
       role: nm.role
     };
-    setMember([
-      ...member,
+    setMembers([
+      ...members,
       newMember
     ]);
   }
@@ -32,7 +31,7 @@ function App() {
     <div className="App">
       <h1>Our Team</h1>
       <Form addNewMember={addNewMember} />
-      <Team member={member} />
+      <Team member={members} />
     </div>
   );
 }
