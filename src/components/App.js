@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-// import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid'
 
 import Form from './Form';
 import List from './List';
 
 const initialMembersList = [
   {
-    id: Date.now(),
+    id: uuid(),
     username: 'Michael',
     email: 'michael@michael.com',
     role: 'Student'
@@ -31,7 +31,7 @@ export default function App() {
       !formValues.email.trim() ||
       !formValues.role.trim()
       ) { return }
-    const newMember = { ...formValues, id: Date.now() }
+    const newMember = { ...formValues, id: uuid() }
     setMembers([ newMember, ...members ])
     setFormValues(initialFormValues)
   }
@@ -45,7 +45,7 @@ export default function App() {
   return (
     <div>
       <Form
-        value={formValues}
+        values={formValues}
         onInputChange={onInputChange}
         onSubmit={onSubmit}
       />
