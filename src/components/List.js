@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Members = props => {
+export default function List(props) {
   return (
     <div>
       
     </div>
   );
 }
-
-export default Members;
