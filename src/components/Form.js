@@ -8,16 +8,16 @@ export default function Form(props) {
   } = props
         
   return (
-    <form className='form-container' onSubmit={onSubmit}>
+    <form className='form container' onSubmit={onSubmit}>
 
       <div className='form-group submit'>
-        <h2>Add a Friend</h2>
+        <h2>Add a Member</h2>
         <button>submit</button>
       </div>
 
       <div className='form-inputs'>
         <h4>General information</h4>
-        
+
         <label>Username:&nbsp;
           <input
             type='text'
